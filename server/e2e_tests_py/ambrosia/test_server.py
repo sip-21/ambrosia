@@ -49,7 +49,7 @@ class AmbrosiaTestServer:
         logger.info(f"Starting server from directory: {self._gradle_dir}")
 
         # Change to the app directory and run gradlew with Phoenix configuration
-        # Use shorter access token expiration (10 seconds) for faster E2E testing
+        # Use shorter access token expiration (5 seconds) for faster E2E testing
         # Note: All application arguments must be in a single quoted string after --args
         args_string = "--phoenixd-url http://localhost:9740 --phoenixd-password test-password --jwt-access-token-expiration 5"
         cmd = [
