@@ -39,6 +39,10 @@ All notable changes to the Ambrosia POS E2E test suite will be documented in thi
   - Fixes cookie inconsistency between login (`secure = false`) and refresh (`secure = true`) endpoints
   - Applied to login and refresh endpoints
   - Unskipped `test_routing_e2e.py::test_logout_revokes_tokens` test (now passes with dynamic cookies)
+- **Optimized Token Expiration Test**: `test_access_token_expires_after_one_minute` renamed to `test_access_token_expiration_and_refresh`
+  - Reduced wait time from 65s to 8s using 5-second token expiration
+  - Removed `@pytest.mark.slow` - now runs by default
+  - Test suite now completes in ~15 seconds (was ~80+ seconds)
 - **Removed Manual Cookie Workarounds**: Cleaned up test code that manually set cookies in `test_auth_e2e.py`:
   - Removed workaround from `test_access_token_expiration_and_refresh`
   - Removed workaround from `test_logout_revokes_tokens`

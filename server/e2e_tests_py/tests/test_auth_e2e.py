@@ -102,8 +102,6 @@ class TestAuthentication:
         2. Expired access token is rejected (401 on protected endpoints)
         3. Refresh token still works after access token expires
         4. New access token is generated and works
-
-        Marked as @pytest.mark.slow - can be skipped with: pytest -m "not slow"
         """
         async with AmbrosiaHttpClient(server_url) as client:
             # Login to get tokens
