@@ -1,4 +1,4 @@
-const store_es = {
+const storeEs = {
   navbar: {
     users: "Usuarios",
     products: "Productos",
@@ -105,6 +105,9 @@ const store_es = {
     card: {
       add: "Agregar",
       stock: "en almacén",
+      errors: {
+        unknownCategory: "Categoría desconocida",
+      },
     },
     summary: {
       title: "Resumen",
@@ -139,22 +142,22 @@ const store_es = {
     },
     paymentModal: {
       bitcoin: {
-        title: "Pago con Bitcoin",
+        title: "Pago con Bitcoin (Lightning)",
         subtitle: "Pídele al cliente que escanee el QR para completar el pago",
         generating: "Generando invoice...",
-      retry: "Reintentar",
-      totalLabel: "Total",
-      cancel: "Cancelar",
-      confirm: "Confirmar pago",
-      close: "Cerrar",
-      complete: "Pago recibido",
-      confirmed: "Pago confirmado",
-      waitingPayment: "Esperando la confirmación del pago...",
-      paidAt: "Confirmado a las {time}",
-      websocket: {
-        paymentReceivedTitle: "Pago recibido",
-        paymentReceivedDescription: "Hash: {hash}",
-      },
+        retry: "Reintentar",
+        totalLabel: "Total",
+        cancel: "Cancelar",
+        confirm: "Confirmar pago",
+        close: "Cerrar",
+        complete: "Pago recibido",
+        confirmed: "Pago confirmado",
+        waitingPayment: "Esperando la confirmación del pago...",
+        paidAt: "Confirmado a las {time}",
+        websocket: {
+          paymentReceivedTitle: "Pago recibido",
+          paymentReceivedDescription: "Hash: {hash}",
+        },
       },
       cash: {
         title: "Pago en Efectivo",
@@ -241,13 +244,14 @@ const store_es = {
       receive: {
         tabTitle: "Recibir",
         invoiceAmountLabel: "Monto en satoshis",
-      invoiceDescriptionLabel: "Descripción (opcional)",
-      invoiceDescriptionPlaceholder: "Concepto del pago",
-      invoiceLightningButton: "Crear Factura Lightning",
-      invoiceLightningLoading: "Creando Factura...",
-      invoiceSuccessTitle: "Factura creada",
-      invoiceSuccessDescription: "La factura Lightning se ha generado correctamente",
-    },
+        invoiceDescriptionLabel: "Descripción (opcional)",
+        invoiceDescriptionPlaceholder: "Concepto del pago",
+        invoiceLightningButton: "Crear Factura Lightning",
+        invoiceLightningLoading: "Creando Factura...",
+        invoiceSuccessTitle: "Factura creada",
+        invoiceSuccessDescription:
+          "La factura Lightning se ha generado correctamente",
+      },
       send: {
         tabTitle: "Enviar",
         payInvoiceLabel: "Factura BOLT11",
@@ -335,4 +339,4 @@ const store_es = {
   },
 };
 
-export default store_es;
+export default storeEs;
